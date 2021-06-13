@@ -1,5 +1,6 @@
 package com.leetcode.learning.rh;
 
+
 /**
  * 给你两个字符串，请你从这两个字符串中找出最长的特殊序列。
  *
@@ -13,6 +14,7 @@ package com.leetcode.learning.rh;
  * 链接：https://leetcode-cn.com/problems/longest-uncommon-subsequence-i
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
+
 
 public class Quest521_N {
     public class Solution {
