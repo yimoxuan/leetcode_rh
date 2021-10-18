@@ -1,3 +1,18 @@
+//import java.io.BufferedInputStream;
+//import java.io.BufferedWriter;
+//import java.io.OutputStreamWriter;
+//import java.util.Scanner;
+//import java.util.TreeMap;
+
+import com.leetcode.learning.rh.Main;
+
+import javax.print.DocFlavor;
+import java.io.BufferedInputStream;
+import java.util.*;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 //package com.leetcode.learning.rh;
 //
 //import org.w3c.dom.Node;
@@ -478,8 +493,8 @@
 //}
 //
 //
-//public class Main {
-//
+public class Solution {
+
 //    public static void main(String[] args) {
 //        Scanner sc = new Scanner(new BufferedInputStream(System.in));
 //        int n = sc.nextInt();
@@ -491,7 +506,9 @@
 //        int [] table2 = new int[n];
 //
 //        for (int i=0; i<n; i++) {
-//            if (nums[i] % 2)
+//            if (nums[i] % 2){
+//
+//            }
 //        }
 //
 //        for (int i = 0; i<m; i++) {
@@ -500,5 +517,196 @@
 //            int c = sc.nextInt();
 //        }
 //
+//        OutputStreamWriter osr = new OutputStreamWriter(System.out);
+//        BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(System.out));
 //    }
-//}
+
+//    long dfs(int leftNum, int before, int [] nums, int m, int k, int x) {
+//        if (leftNum == 0){
+//            if (before % x == k)
+//                return 1L;
+//            return 0L;
+//        }
+//        long res = 0;
+//        if (before == 0) {
+//            for (int i : nums)
+//                res += dfs(leftNum - 1, i, nums, m, k, x);
+//        }
+//        else {
+//            for (int i : nums){
+//                res += dfs(leftNum - 1, i, nums, m, k, x);
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(new BufferedInputStream(System.in));
+//        int n, m, k, x;
+//        n = sc.nextInt();
+//        m = sc.nextInt();
+//        k = sc.nextInt();
+//        k = sc.nextInt();
+//        int [] nums = new int[n];
+//
+//
+//    }
+
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(new BufferedInputStream(System.in));
+//        int T, N, K, A, W;
+//        T = sc.nextInt();
+//        N = sc.nextInt();
+//        K = sc.nextInt();
+//        ArrayList<Integer> [] nums = new ArrayList[1001];
+//        for (int i = 0; i < 1001; i++) {
+//
+//        }
+
+//        ArrayList<int[]> ints = new ArrayList<>();
+//        for (int i=0; i<N; i++) {
+//            A = sc.nextInt();
+//            W = sc.nextInt();
+//            ints.add(new int[]{A, W});
+//        }
+//        ints.sort(new Comparator<int[]>() {
+//            @Override
+//            public int compare(int[] o1, int[] o2) {
+//                return o1[1] - o2[1];
+//            }
+//        });
+//        int mod = 1000000007;
+//        Long sum = 0L;
+//        for (int i=0; i<N; i++) {
+//
+//        }
+//    }
+
+//    void getRes(HashMap<Integer, Integer> hashMap, ArrayList<ArrayList<Integer>> table, int N, int M) {
+//        HashSet<Integer> hashSet = new HashSet<>();
+//        ArrayList<Integer> integers = new ArrayList<>();
+//        for (int x=0; x<N; x++) {
+//            int min_num = -1;
+//            HashMap tmpHash = new HashMap<Integer>();
+//            for (int y=0; y<M; y++) {
+//            while table[y] and table[y][0] in ret_set:
+//            table[y] = table[y][1:]
+//            if not table[y]:
+//            continue
+//                    tmp_map[table[y][0]] += 1
+//            if map_count[table[y][0]] == tmp_map[table[y][0]]:
+//            if not min_num:
+//            min_num = table[y][0]
+//                else:
+//            print("NO")
+//            return
+//            if not min_num:
+//            print("NO")
+//            return
+//                    ret_set.add(min_num)
+//            ret_list.append(min_num)
+//            print(" ".join(ret_list))
+//
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(new BufferedInputStream(System.in));
+//        int T = sc.nextInt();
+//        for (int i = 0; i<T; i++) {
+//            int N = sc.nextInt();
+//            int M = sc.nextInt();
+//            HashMap<Integer, Integer> hashCount = new HashMap<Integer, Integer>();
+//            ArrayList<ArrayList<Integer>> table = new ArrayList<ArrayList<Integer>>();
+//            for ( int j= 0; j<M; j++) {
+//                int c = sc.nextInt();
+//                table.add(new ArrayList<>());
+//                table.get(j).add(c);
+//                hashCount.put(c, hashCount.getOrDefault(c, 0)+1);
+//            }
+//            getRe
+//        }
+//
+//    }
+
+
+
+//    public static void main(String[] args) {
+//
+//        Integer value1 = 1, value2 = 2;
+//
+//        Thread thread1 = new Thread() {
+//            @Override
+//            public void run() {
+//                synchronized (value1) {
+//                    System.out.println("thread 1 get value1");
+//                    try {
+//                        sleep(2);
+//                        synchronized (value2) {
+//                            System.out.println("thread1 get value2");
+//                        }
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//            }
+//        };
+//
+//        Thread thread2 = new Thread() {
+//            @Override
+//            public void run() {
+//                try {
+//                    sleep(1);
+//                    synchronized (value2) {
+//                        System.out.println("thread2 get value2");
+//                        synchronized (value1) {
+//                            System.out.println("thread2 get value1");
+//                        }
+//                    }
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//
+//                super.run();
+//            }
+//        };
+//
+//        thread1.start();
+//        thread2.start();
+//    }
+    //
+
+//    public int get_res(int[] weights, int w) {
+//        int res = 0;
+//        for (int i=weights.length-1; i>=0; i--) {
+//            if (weights[i] == w + 1)
+//                continue;
+//            for (int j = i-1; i>=0; i--) {
+//                if ((weights[i] + weights[j]) <= w && (weights[i] + weights[j]) % 2 == 0) {
+//                    weights[j] = w + 1;
+//                    break;
+//                }
+//            }
+//            res += 1;
+//        }
+//        return res;
+//    }
+//
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(new BufferedInputStream(System.in));
+//        Main test = new Main();
+//        int T = sc.nextInt();
+//        for (int t=0; t<T; t++) {
+//            int n = sc.nextInt();
+//            int w = sc.nextInt();
+//            int[] weights = new int[n];
+//            for (int i=0; i<n; i++)
+//                weights[i] = sc.nextInt();
+//            Arrays.sort(weights);
+//            System.out.println();
+////            System.out.println(main.get_res(weights, w));
+//        }
+//
+//
+//    }
+
+
+}
